@@ -5,7 +5,7 @@
 
     <Header />
     <div class="main">
-      <transition name="fade" mode="out-in">
+      <transition name="cascade" mode="out-in">
         <router-view/>
       </transition>
     </div>
@@ -49,7 +49,7 @@ html, body {
   background-color: @contentBgColor;
   color: @textColor;
 
-  font-family: 'Karla', Helvetica, Arial, sans-serif;
+  font-family: 'Audiowide', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -119,4 +119,13 @@ h1 {
   opacity: 0
 }
 
+/* Base transition for the entire page */
+.cascade-enter-active, .cascade-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cascade-enter, .cascade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
 </style>

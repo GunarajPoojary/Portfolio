@@ -30,8 +30,9 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { PropType } from "vue";
 import ProjectDetailsOverlay from "@/components/ProjectDetailsOverlay.vue";
-import ProjectData from "@/data/ProjectData.ts";
+import ProjectData from "@/data/ProjectData";
 
 export default Vue.extend({
   name: "ProjectsList",
@@ -39,7 +40,10 @@ export default Vue.extend({
     ProjectDetailsOverlay,
   },
   props: {
-    projects: Array
+    projects: {
+      type: Array as PropType<ProjectData[]>,
+      required: true,
+    },
   },
   data: function () {
     return {
@@ -51,21 +55,17 @@ export default Vue.extend({
   },
   methods: {
     showDetails: function (item: ProjectData) {
-      // if (event) {
-      //   alert(event.target);
-      // }
       this.popupTitle = item.name;
       this.popupColor = item.accentColor;
       this.popupContent = item.htmlDescription;
       this.showPopup = true;
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     },
   },
 });
 </script>
 
 <style scoped>
-
 .project-item {
   height: 300px;
   margin-bottom: 20px;
@@ -125,7 +125,4 @@ filter: brightness(120%);
     grid-row-end: span 2;
   }
 }
-
-
-
 </style>

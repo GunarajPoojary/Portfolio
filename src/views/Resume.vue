@@ -1,105 +1,106 @@
 <template>
   <div>
-    <h1>Resume</h1>
+    <h1 class="cascade" style="--delay: 0ms;">Resume</h1>
 
-    <div class="paragraph">
-      I'm <strong>John Matrix</strong>, a former Delta Force operative with lots of experience, lots of training and huge muscles.
-      <br />After graduating from kindergarten, I've been enrolled in the army for 25 years, where I learned to destroy things in an amazing number of ways.
-      <br />I joined the Delta Force because I thought it was Greek lessons, but I quickly adapted to this unexpected environment and became a key element.
-      <br />I love teamwork, but I can also go in solo depending on the mission requirements.
-      <br />
-      <br />Right now I'm trying to find inner peace after I've read some personal development books. I'm looking for a monk job so if you have any opportunity feel free to 
-      <router-link to="/contact">contact me</router-link>.
-      <br />
-      <br />Besides war, I'm passionate about firearms, martial arts, explosions, push-ups and flowers.
+    <!-- Intro Section -->
+    <div class="intro-container cascade" style="--delay: 100ms;">
+      <div class="paragraph">
+        I'm a passionate Unity Game Developer with hands-on experience in crafting interactive 2D and 3D applications. Based in Karnataka, India, I bring a strong technical foundation and a creative mindset to every project I work on.
+        <br /><br />
+        After graduating with a Bachelor's degree in Mechanical Engineering in 2022, I discovered my true calling in game development and have since dedicated myself to learning and building games that are both engaging and immersive.
+        <br /><br />
+        If you'd like to collaborate or learn more, feel free to <router-link to="/contact">contact me</router-link>.
+        <br /><br />
+        <div class="download-wrapper">
+          <a class="download-link" href="/d/Resume(Gunaraj Poojary).pdf" download="Gunaraj_Resume.pdf">
+            <i class="fa fa-download fa-lg fa-fw"></i> Download as PDF
+          </a>
+        </div>
+      </div>
 
-      <div style="margin-top:20px; margin-bottom:20px;">
-        <a class="download-link" href="d/resume-en.pdf" target="_blank"><i class="fa fa-download fa-lg fa-fw"></i> Download as PDF 🇬🇧</a>
-        <a class="download-link" href="d/cv-fr.pdf" target="_blank"><i class="fa fa-download fa-lg fa-fw"></i> Télécharger en PDF 🇫🇷</a>
-        <div style="clear:both"></div>
+      <div class="resume-photo">
+        <img src="img/resume-photo.jpg" alt="Photo of Gunaraj" />
       </div>
     </div>
-    <div class="photo">
-      <img src="img/resume-photo.png" alt="Photo of John" />
-    </div>
-
-    <div style="clear:both"></div>
 
     <div class="full-content">
-      <h2>Work experience</h2>
-
-      <h3>Operation Classified - Delta Force</h3>
-      <h4>2018-2019</h4>
-
-      <div>It's classified so I can't speak about it.</div>
-
-      <div class="tech-stack">Firearms, knives, grenades, Hummer vehicle, parachute,...</div>
-
-      <h3>Operation Classified - Delta Force</h3>
-      <h4>2015-2017</h4>
-
-      <div>It's classified so I can't speak about it.</div>
-
-      <div class="tech-stack">Even more Firearms, knives, grenades, Hummer vehicle, parachute,...</div>
-
-      <h3>Operation Classified - Delta Force</h3>
-      <h4>2012-2015</h4>
-
-      <div>It's classified so I can't speak about it.</div>
-
-      <div class="tech-stack">Firearms, knives, grenades, Hummer vehicle, parachute,...</div>
-
-      <h2>Skills</h2>
-
-      <div class="skill-set">
-        <h3>Lethal</h3>
-        <SkillRate name="Handguns" :rate="5" />
-        <SkillRate name="Rifles" :rate="5" />
-        <SkillRate name="Shotguns" :rate="5" />
-        <SkillRate name="Machineguns" :rate="5" />
-        <SkillRate name="Missile launchers" :rate="5" />
-        <SkillRate name="Knives" :rate="5" />
-        <SkillRate name="Hand to hand combat" :rate="5" />
+      <!-- Work Experience -->
+      <h2 class="section-heading cascade" style="--delay: 200ms;">Work Experience</h2>
+      <div class="entry cascade" style="--delay: 250ms;">
+        <h3>Unity Intern – Realfy Oasis Pvt Ltd</h3>
+        <h4>Sep 2024 – March 2025</h4>
+        <p>Developed a fitness app in Unity using MoveNet and implemented Firebase authentication, real-time DB integration, UI/UX animations, and fitness tracking features.</p>
+        <div class="tech-stack">Unity, C#, MoveNet, Firebase, Google Fit API, DOTween, UI/UX</div>
       </div>
 
-      <div class="skill-set">
-        <h3>Non-lethal</h3>
-        <SkillRate name="Sneaking" :rate="1" />
-        <SkillRate name="Negotiation" :rate="1" />
-        <SkillRate name="Seduction" :rate="1" />
-        <SkillRate name="Sense of humor" :rate="2" />
+      <!-- Projects -->
+      <h2 class="section-heading cascade" style="--delay: 300ms;">Projects</h2>
+      <div class="entry cascade" style="--delay: 350ms;">
+        <h3>Gravity Shift (Inspired by Sky Beneath)</h3>
+        <h4>Sept 2024</h4>
+        <p>Implemented a gravity-shifting system with smooth reorientation and character alignment. Puzzle-based mechanics and hologram previews.</p>
+        <div class="tech-stack">Unity, C#, Rigidbody, Cinemachine</div>
       </div>
-      <div style="clear:both" />
 
-      <h2>Education</h2>
+      <div class="entry cascade" style="--delay: 400ms;">
+        <h3>Space Object Collector</h3>
+        <h4>April 2025</h4>
+        <p>Arcade-style 2D game where players collect floating space debris with limited resources and combo bonuses. Built with a clean MVC structure.</p>
+        <div class="tech-stack">Unity, C#, MVC, Singleton, Object Pooling, Service Locator</div>
+      </div>
 
-      <h3>Kindergarten - 1985</h3>
-      <h4>Kindergarten degree</h4>
-      <div>Specialty in bullying and fighting (58 wins, 58 K-O, 0 losses)</div>
+      <!-- Skills -->
+      <h2 class="section-heading cascade" style="--delay: 450ms;">Skills</h2>
+      <div class="skill-set-container">
+        <div class="skill-set cascade" style="--delay: 500ms;">
+          <h3>Programming & Architecture</h3>
+          <SkillRate name="C#" :rate="5" />
+          <SkillRate name="OOP / Design Patterns" :rate="5" />
+          <SkillRate name="Unity 2D/3D" :rate="5" />
+          <SkillRate name="MVC / SOLID Principles" :rate="4" />
+          <SkillRate name="C++ (Beginner)" :rate="2" />
+        </div>
 
-      <h2>Languages</h2>
+        <div class="skill-set cascade" style="--delay: 550ms;">
+          <h3>Tools & Collaboration</h3>
+          <SkillRate name="Git / GitHub" :rate="5" />
+          <SkillRate name="Jira / Agile" :rate="4" />
+          <SkillRate name="ClickUp / Miro" :rate="3" />
+        </div>
+      </div>
 
-      <h3>American</h3>
-      <div>Basic knowledge but I know lots of one-liners</div>
+      <!-- Education -->
+      <h2 class="section-heading cascade" style="--delay: 600ms;">Education</h2>
+      <div class="entry cascade" style="--delay: 650ms;">
+        <h3>St. Joseph Engineering College</h3>
+        <h4>B.E. in Mechanical Engineering</h4>
+        <div>Aug 2018 – Sept 2022</div>
+      </div>
 
-      <h3>That's it</h3>
-      <div>Who needs another language when you speak American?</div>
+      <div class="entry cascade" style="--delay: 700ms;">
+        <h3>Govt PU College Navunda</h3>
+        <h4>PUC – PCMB</h4>
+        <div>Jun 2016 – Mar 2018</div>
+      </div>
 
+      <!-- Certifications -->
+      <h2 class="section-heading cascade" style="--delay: 750ms;">Certifications</h2>
+      <div class="entry cascade" style="--delay: 800ms;">
+        <h3>Foundational C# with Microsoft</h3>
+        <div>Oct 2023</div>
+        <h3>Unity 2D and C# for Beginner Game Developers</h3>
+        <div>Jan 2023</div>
+        <h3>3D Modelling and Texturing with Blender</h3>
+        <div>Dec 2022</div>
+      </div>
 
-      <h2>Besides...</h2>
-      <div>
-        <h3>I ❤️ Violence</h3>
-        <div>I find it really soothing to just shoot at bad guys</div>
-
-        <h3>I 🧡 Sports</h3>
-        <div>I used to be thin but then I ingested 10 kilos of steroids and proteins a day while doing 1000 push-ups.</div>
-
-        <h3>I 💛 Politics</h3>
-        <div>I hope I can have a career here someday but I might have temper issues.</div>
-
-        <h3>I 💚 Flowers</h3>
-        <div>Especially the big ones, with the trunk and leaves.</div>
-
+      <!-- Languages -->
+      <h2 class="section-heading cascade" style="--delay: 850ms;">Languages</h2>
+      <div class="entry cascade" style="--delay: 900ms;">
+        <h3>English</h3>
+        <div>Professional proficiency</div>
+        <h3>Kannada, Hindi</h3>
+        <div>Native proficiency</div>
       </div>
     </div>
   </div>
@@ -107,85 +108,134 @@
 
 <script lang="ts">
 import Vue from "vue";
-import SkillRate from "@/components/SkillRate.vue";
 
 export default Vue.extend({
   name: "Resume",
-  components: {
-    SkillRate,
-  },
+  mounted() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 });
 </script>
 
 <style scoped>
-h2 {
-  font-weight: 100;
-  font-size: 2em;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 50px;
+/* Typography & Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #222;
 }
-h3 {
-  font-weight: 100;
-  font-size: 1.6em;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 30px;
+
+.cascade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.5s forwards;
+  animation-delay: var(--delay);
 }
-h4 {
-  font-weight: 100;
-  font-size: 1.3em;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 15px;
-  font-style: italic;
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
 }
 
 .paragraph {
-  max-width: 700px;
+  flex: 1;
+  min-width: 250px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.resume-photo {
+  flex-shrink: 0;
+}
+
+.resume-photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.download-wrapper {
+  margin-top: 20px;
 }
 
 .download-link {
-  float:left;
-  margin-right: 50px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.full-content div {
-  max-width: 800px;
+.full-content {
+  padding-top: 40px;
 }
 
-.skill-set h3 {
-  padding-bottom: 10px;
+.section-heading {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 1.5rem;
 }
 
-.photo img {
-  height: 300px;
-  width: 300px;
+.entry {
+  margin-bottom: 30px;
+}
+
+.entry h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.entry h4 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.entry p {
+  margin-bottom: 10px;
 }
 
 .tech-stack {
+  font-size: 0.9rem;
+  color: #555;
   font-style: italic;
 }
 
-.photo {
-  margin-top: 50px;
-  text-align: center;
+/* Skills Grid */
+.skill-set-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-@media only screen and (min-width: 620px){
-  .paragraph {
-    float: left;
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .photo {
-    float: left;
-    padding: 30px;
-    padding-left: 80px;
+  .resume-photo img {
+    margin-top: 20px;
   }
 
-  .skill-set {
-    float: left;
-    padding-right: 60px; 
+  .skill-set-container {
+    flex-direction: column;
   }
 }
 </style>
